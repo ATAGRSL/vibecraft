@@ -1,65 +1,82 @@
 # VibeCraft AI 🎨✨
 
-AI destekli bir moodboard oluşturucu. Bir "vibe", bir duygu veya bir konsept tanımlayın ve VibeCraft AI, bir renk paleti, açıklayıcı bir anlatı ve çağrışımcı görsellerden oluşan benzersiz bir moodboard oluştursun.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Gemini API](https://img.shields.io/badge/Gemini_API-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://ai.google.dev/)
 
-Uygulama, kullanıcıların bir metin istemi girebildiği şık, koyu temalı bir arayüze sahiptir. Gönderildikten sonra, bir başlık, bir anlatı, interaktif bir renk paleti ve yüksek kaliteli görsellerden oluşan eksiksiz bir moodboard oluşturur ve görüntüler.
-
-## ✨ Özellikler
-
-- **Yapay Zeka Destekli Üretim**: Vibe'ınızı yorumlamak ve içerik oluşturmak için Google Gemini API'sinden yararlanır.
-- **Eksiksiz Moodboard'lar**: Kısa bir hikaye, açıklayıcı isimlere sahip 5 renkli bir palet ve dört benzersiz görsel oluşturur.
-- **İnteraktif Arayüz**: Renk paletindeki bir renge tıklayarak hex kodunu panonuza kopyalayın.
-- **Duyarlı Tasarım**: Hem masaüstü hem de mobil cihazlarda harika görünür ve çalışır.
-- **Etkileyici Deneyim**: Sizi bilgilendirmek için akıcı animasyonlar ve dinamik bir yükleme ekranı içerir.
-
-## 🛠️ Kullanılan Teknolojiler
-
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **AI Modeli**: Google Gemini (`gemini-2.5-flash` & `imagen-4.0-generate-001`)
-
-## 🚀 Başlarken
-
-Bu projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
-
-### Ön Koşullar
-
-Modern bir web tarayıcısına ve dosyaları sunmanın bir yoluna ihtiyacınız var. Bu proje, bir derleme adımı olmadan doğrudan tarayıcıda çalışacak şekilde ayarlanmıştır, ancak çalışması için bir API anahtarı gerektirir.
-
-### Kurulum
-
-1.  **Depoyu klonlayın:**
-    ```bash
-    git clone https://github.com/ATAGRSL/vibecraft-ai.git
-    cd vibecraft-ai
-    ```
-
-2.  **API Anahtarınızı ayarlayın:**
-    Uygulama, Google Gemini API anahtarını bir ortam değişkeninden (`process.env.API_KEY`) okuyacak şekilde yapılandırılmıştır. Tipik bir sadece tarayıcı kurulumunda bu değişken mevcut olmayacaktır.
-
-    Yerel geliştirme için en basit yöntem, `services/geminiService.ts` dosyasını doğrudan düzenlemektir:
-
-    Bu satırı bulun:
-    ```javascript
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-    ```
-    Ve kendi anahtarınızla değiştirin:
-    ```javascript
-    const ai = new GoogleGenAI({ apiKey: "BURAYA_KENDI_GEMINI_API_ANAHTARINIZI_YAPISTIRIN" });
-    ```
-
-    > **⚠️ Uyarı:** **API anahtarınızı asla GitHub'a göndermeyin!** Bu yöntem yalnızca yerel testler içindir. Bu projeyi dağıtmayı planlıyorsanız, ortam değişkenlerini güvenli bir şekilde yönetmek için Vite veya Next.js gibi uygun bir derleme sistemi kullanın.
-
-3.  **Uygulamayı çalıştırın:**
-    Bir derleme adımı olmadığından, yalnızca `index.html` dosyasını sunmanız yeterlidir. Kod düzenleyiciniz için basit bir yerel sunucu uzantısı (VS Code için Live Server gibi) kullanabilir veya bir komut satırı sunucusu çalıştırabilirsiniz:
-    ```bash
-    # Python 3 varsa
-    python -m http.server
-
-    # Veya Node.js ve npx varsa
-    npx serve
-    ```
-    Ardından, tarayıcınızı açın ve sağlanan yerel adrese gidin (örneğin, `http://localhost:8000` veya `http://localhost:3000`).
+Turn your ideas into visual worlds. VibeCraft AI uses the power of Google's Gemini API to generate stunning, comprehensive moodboards from a single text prompt. Describe a feeling, a place, or a concept, and watch it come to life.
 
 ---
 
-Bu proje, Gemini API ile yaratıcı bir yapay zeka uygulaması oluşturmanın bir gösterimi olarak oluşturulmuştur. Vibe'larınızı oluşturmanın tadını çıkarın!
+<!-- Optional: Add a screenshot or GIF of the application in action -->
+<!-- ![VibeCraft AI Demo](link-to-your-screenshot-or-gif.gif) -->
+
+## 🌟 Key Features
+
+- **🤖 AI-Powered Generation**: Leverages `gemini-2.5-flash` for narrative and color generation, and `imagen-4.0-generate-001` for stunning visuals.
+- **🎨 Complete Moodboards**: Each creation includes a short, evocative story, a 5-color palette with descriptive names, and four unique, high-quality images.
+- **✨ Interactive Interface**: A sleek, dark-mode UI where you can easily copy color hex codes to your clipboard with a single click.
+- **📱 Fully Responsive**: Designed to look and work beautifully on desktops, tablets, and mobile devices.
+- **⚡️ Dynamic Experience**: Smooth animations and an engaging loading screen provide a polished user experience.
+
+## 🛠️ Tech Stack
+
+- **Framework**: React with TypeScript
+- **Styling**: Tailwind CSS
+- **AI Models**: Google Gemini API (`gemini-2.5-flash`, `imagen-4.0-generate-001`)
+- **Environment**: Runs directly in the browser with ES modules (no build step).
+
+## 🚀 Getting Started
+
+You can run this project locally to experiment with the Gemini API.
+
+### Prerequisites
+
+- A modern web browser.
+- A local web server to serve the files.
+- A Google Gemini API key.
+
+### Local Development Setup
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/your-username/vibecraft-ai.git
+    cd vibecraft-ai
+    ```
+
+2.  **API Key Configuration**
+    This application requires a Google Gemini API key to function. It is designed to be loaded from an environment variable `process.env.API_KEY`.
+
+    > **Important**
+    > For this browser-based project, the environment variable must be made available to the application at runtime. How you achieve this depends on your hosting or development environment. **Do not hardcode your API key directly into the source code.**
+
+3.  **Run the Application**
+    Since this project doesn't have a build step, you just need to serve the `index.html` file. You can use any simple static file server.
+
+    - **Using Python:**
+      ```bash
+      # Make sure you are in the project's root directory
+      python -m http.server
+      ```
+
+    - **Using Node.js (with `serve`):**
+      ```bash
+      # Install serve globally if you haven't already: npm install -g serve
+      npx serve
+      ```
+    
+    Once the server is running, open your browser and navigate to the provided local address (e.g., `http://localhost:8000` or `http://localhost:3000`).
+
+## 🧠 How It Works
+
+VibeCraft AI performs a two-stage generation process when you submit a prompt:
+
+1.  **Text & Palette Generation**: A request is sent to the `gemini-2.5-flash` model with a prompt and a strict JSON schema. The model returns a structured JSON object containing an evocative description and a 5-color palette with names and hex codes.
+2.  **Image Generation**: Concurrently, a request is sent to the `imagen-4.0-generate-001` model with the same user prompt, asking for four high-quality, aesthetic images that match the vibe.
+
+The results are then combined and displayed in a beautifully formatted moodboard.
+
+---
+
+This project was created to demonstrate a creative and practical application of the Google Gemini API. Enjoy bringing your vibes to life!
